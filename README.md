@@ -1,7 +1,7 @@
 # Dense Label Encoding for Boundary Discontinuity Free Rotation Detection
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-<!-- [![arXiv](http://img.shields.io/badge/cs.CV-arXiv%3A2004.08955-B31B1B.svg)]() -->
+ [![arXiv](http://img.shields.io/badge/cs.CV-arXiv%3A2011.09670-B31B1B.svg)](https://arxiv.org/abs/2011.09670)
 
 ## Abstract
 This repo is based on [Focal Loss for Dense Object Detection](https://arxiv.org/pdf/1708.02002.pdf), and it is completed by [YangXue](https://yangxue0827.github.io/).
@@ -13,7 +13,7 @@ Techniques:
 - [x] [RetinaNet-H, RetinaNet-R](https://arxiv.org/abs/1908.05612)
 - [x] [R<sup>3</sup>Det: Feature Refinement Module (FRM)](https://arxiv.org/abs/1908.05612)
 - [x] [Circular Smooth Label (CSL)](https://arxiv.org/abs/2003.05597)
-- [x] [Densely Coded Label (DCL)]()
+- [x] [Densely Coded Label (DCL)](https://arxiv.org/abs/2011.09670)
 - [x] Dataset support: DOTA, HRSC2016, ICDAR2015, ICDAR2017 MLT, UCAS-AOD, FDDB, OHD-SJTU, SSDD++
 
 
@@ -138,6 +138,13 @@ tensorboard --logdir=.
 If this is useful for your research, please consider cite.
 
 ```
+@article{yang2019r3det,
+    title={Dense Label Encoding for Boundary Discontinuity Free Rotation Detection},
+    author={Yang, Xue and Hou, Liping and Zhou, Yue and Wang, Wentao and Yan, Junchi},
+    journal={arXiv preprint arXiv:2011.09670},
+    year={2020}
+}
+
 @article{yang2020arbitrary,
     title={Arbitrary-Oriented Object Detection with Circular Smooth Label},
     author={Yang, Xue and Yan, Junchi},
