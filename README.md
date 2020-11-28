@@ -138,7 +138,7 @@ tensorboard --logdir=.
 If this is useful for your research, please consider cite.
 
 ```
-@article{yang2019r3det,
+@article{yang2020dense,
     title={Dense Label Encoding for Boundary Discontinuity Free Rotation Detection},
     author={Yang, Xue and Hou, Liping and Zhou, Yue and Wang, Wentao and Yan, Junchi},
     journal={arXiv preprint arXiv:2011.09670},
