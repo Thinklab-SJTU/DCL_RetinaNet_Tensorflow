@@ -155,7 +155,7 @@ If this is useful for your research, please consider cite.
 
 @article{yang2019r3det,
     title={R3Det: Refined Single-Stage Detector with Feature Refinement for Rotating Object},
-    author={Yang, Xue and Liu, Qingqing and Yan, Junchi and Li, Ang and Zhang, Zhiqiang and Yu, Gang},
+    author={Yang, Xue and Yan, Junchi and Feng, Ziming and He, Tao},
     journal={arXiv preprint arXiv:1908.05612},
     year={2019}
 }
