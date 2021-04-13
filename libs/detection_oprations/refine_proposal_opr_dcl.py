@@ -8,7 +8,7 @@ from libs.box_utils.coordinate_convert import coordinate_present_convert
 from help_utils.densely_coded_label import angle_label_decode
 
 
-def postprocess_detctions(refine_bbox_pred, refine_cls_prob, refine_angle_prob, refine_boxes, is_training):
+def postprocess_detctions(refine_bbox_pred, refine_cls_prob, refine_angle_prob, refine_boxes, is_training, gpu_id):
 
     # return_boxes_pred = []
     return_boxes_pred_angle = []
@@ -60,13 +60,15 @@ def postprocess_detctions(refine_bbox_pred, refine_cls_prob, refine_angle_prob, 
                                                  Tout=[tf.float32])
             refine_boxes_pred_angle = tf.reshape(refine_boxes_pred_angle, [-1, 5])
 
+        max_output_size = 4000 if 'DOTA' in cfgs.NET_NAME else 200
         nms_indices = nms_rotate.nms_rotate(decode_boxes=refine_boxes_pred_angle,
                                             scores=scores,
                                             iou_threshold=cfgs.NMS_IOU_THRESHOLD,
-                                            max_output_size=100 if is_training else 1000,
+                                            max_output_size=100 if is_training else max(),
                                             use_angle_condition=False,
                                             angle_threshold=15,
-                                            use_gpu=False)
+                                            use_gpu=True,
+                                            gpu_id=gpu_id)
 
         # tmp_boxes_pred = tf.reshape(tf.gather(boxes_pred, nms_indices), [-1, 5])
         tmp_refine_boxes_pred_angle = tf.reshape(tf.gather(refine_boxes_pred_angle, nms_indices), [-1, 5])

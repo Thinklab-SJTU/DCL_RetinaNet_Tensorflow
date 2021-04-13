@@ -408,7 +408,8 @@ class DetectionNetwork(object):
                                                                   refine_cls_prob=refine_cls_prob,
                                                                   refine_angle_prob=tf.sigmoid(refine_angle_cls),
                                                                   refine_boxes=refine_boxes,
-                                                                  is_training=self.is_training)
+                                                                  is_training=self.is_training,
+                                                                  gpu_id=gpu_id)
             scores = tf.stop_gradient(scores)
             category = tf.stop_gradient(category)
             boxes_angle = tf.stop_gradient(boxes_angle)
